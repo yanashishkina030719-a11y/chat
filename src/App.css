@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+/* Сообщения других пользователей (слева) */
+.message-response {
+  align-self: flex-start;
+}
+.message-response .message-bubble {
+  background-color: #e9e9eb;
+  color: #000;
+  border-radius: 15px 15px 15px 0;
+}
+
+/* Сообщения текущего пользователя (справа) */
+.message-own {
+  align-self: flex-end;
+}
+.message-own .message-bubble {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 15px 15px 0 15px;
+}
+
+/* Индикатор печатания */
+.message-typing {
+  align-self: flex-start;
+}
+.message-typing .typing-indicator {
+  background-color: #e9e9eb;
+  border-radius: 15px;
+  padding: 10px 15px;
+  color: #666;
+  font-style: italic;
+}
+
+.message-header {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 4px;
+  display: flex;
+  gap: 10px;
+}
+
+.message-own .message-header {
+  justify-content: flex-end;
+}
+
+.message-author {
+  font-weight: bold;
+  color: #555;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
